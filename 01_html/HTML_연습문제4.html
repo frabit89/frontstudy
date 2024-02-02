@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <form action="" method="get">
+    아이디<input type="text" placeholder="아이디" name="id">
+    <input type="button" placeholder="중복확인">
+    <br>
+    비밀번호<input type="password" placeholder="새 비밀번호" name="password">
+    <br>
+    비밀번호 확인<input type="password" placeholder="비밀번호 확인" name="password" >
+    <br>
+    이메일<input type="text" placeholder="이메일" name="email"> @ 
+    <input type="text" placeholder="직접 입력 가능" name="email">
+    <datalist>
+      <option>gmail.com</option>
+      <option>naver.com</option>
+      <option>daum.net</option>
+    </datalist>
+    <br>
+    성별
+    <input type="radio" name="gender" value="man" id="man">
+    <label for="man">남자</label>
+    <input type="radio" name="gender" value="woman" id="woman">
+    <label for="woman">여자</label>
+    <br>
+    관심
+    <input type="checkbox" name="interest" value="IT">IT
+    <input type="checkbox" name="interest" value="management">경영
+    <br>
+    <input type="checkbox" name="interest" value="finance">금융
+    <input type="checkbox" name="interest" value="manucfacture">제조
+    <br>
+    <input type="checkbox" name="interest" value="service">서비스
+    <input type="checkbox" name="interest" value="etc">기타
+    
+    <br>
+    거주지
+    <select name="residence">
+      <option value="null" selected>::선택하세요::</option>
+      <option value="02">서울</option>
+      <option value="042">대전</option>
+      <option value="053">대구</option>
+      <option value="051">부산</option>
+      <option value="032">인천</option>
+    </select>
+    <br>
+    자기소개
+    <br>
+    <textarea rows="5" cols="20" placeholder="200자 이내 간단히 설명" id="introduce">
+    </textarea>
+    <br>
+    이력서
+    <input type="file" name="profile" multiple="multiple" placeholder="파일 선택">
+    <br>
+    제출일 
+    <br>
+    <input type="submit" placeholder="제출">
+    <input type="reset" placeholder="다시입력">
+  </form>
+</body>
+</html>
