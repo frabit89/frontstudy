@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <style>
+
+    .table1 {
+      border: 1px solid gray;
+      border-collapse: collapse;
+    }
+
+    .table1 td{
+      border-bottom: 1px solid tomato;
+      text-align: center;
+    }
+
+    .table1 td:first-of-type {
+      width: 100px;
+    }
+    .table1 td:nth-of-type(2) {
+      width: 200px;
+    }
+    .table1 td:last-child {
+      width: 300px;
+    }
+    .table1 > thead td {
+      padding: 10px;
+    }
+    .table1 > tbody td {
+      height: 50px;
+      vertical-align: top;
+    }
+
+    .table1 tr:hover {
+      background-color: beige;
+      cursor: pointer;
+    }
+
+  </style>
+  <table class="table1">
+    <thead>
+      <tr>
+        <td>회원번호</td>
+        <td>회원명</td>
+        <td>포인트</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>고길동</td>
+        <td>100</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>고사리</td>
+        <td>200</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>고라니</td>
+        <td>300</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan="2">포인트합계</td>
+        <td>600</td>
+      </tr>
+    </tfoot>
+  </table>
+
+  <hr>
+  <style>
+    .title {
+      font-size: 12px;
+      margin-left: 150px;
+    }
+    .title .month {
+      color: blue;
+      font-size: 30px;
+      font-weight: 600;
+    }
+    .table2 {
+      border: 1px solid black;
+      border-collapse: collapse;
+      width: 400px;
+      height: 300px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .table2 td{
+      border: 1px solid black;
+      vertical-align:text-top;
+    }
+    .table2 .sun {
+      color: red;
+    }
+    .table2 .sat {
+      color: blue;
+    }
+    .table2 .other {
+      color: grey;
+    }
+    .table2 .holiday {
+      color: red;
+    }
+  </style>
+  <div class="title">
+    2024 <span class="month">2</span> February
+  </div>
+  <table class="table2">
+    <thead>
+      <tr>
+        <td class="sun">SUN</td>
+        <td>MON</td>
+        <td>TUE</td>
+        <td>WED</td>
+        <td>THU</td>
+        <td>FRI</td>
+        <td class="sat">SAT</td>
+      </tr>
+   </thead>
+   <tbody>
+      <tr>
+        <td class="sun other">28</td>
+        <td class="other">29</td>
+        <td class="other">30</td>
+        <td class="other">31</td>
+        <td>1</td>
+        <td>2</td>
+        <td class="sat">3</td>
+      </tr>
+      <tr>
+        <td class="sun">4</td>
+        <td>5</td>
+        <td>6</td>
+        <td>7</td>
+        <td>8</td>
+        <td class="holiday">9</td>
+        <td class="holiday">10</td>
+      </tr>
+      <tr>
+        <td class="sun holiday">11</td>
+        <td class="holiday">12</td>
+        <td>13</td>
+        <td>14</td>
+        <td>15</td>
+        <td>16</td>
+        <td class="sat">17</td>
+      </tr>
+      <tr>
+       <td class="sun">18</td>
+       <td>19</td>
+       <td>20</td>
+       <td>21</td>
+       <td>22</td>
+       <td>23</td>
+        <td class="sat">24</td>
+      </tr>
+      <tr>
+        <td class="sun">25</td>
+        <td>26</td>
+        <td>27</td>
+        <td>28</td>
+        <td>29</td>
+        <td class="other">1</td>
+        <td class="sat other">2</td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>
