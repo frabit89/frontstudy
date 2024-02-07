@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <style>
+    div {
+      box-sizing: border-box;
+      border: 1px solid gray;
+    }
+    .wrap1 {
+      width: 600px;
+      height: 200px;
+      display: flex;
+    }
+    .wrap1 > div {
+      width: 50px;
+      height: 50px;
+    }
+  </style>
+  <div class="wrap1">
+    <div class="box1">box1</div>
+    <div class="box2">box2</div>
+    <div class="box3">box3</div>
+  </div>
+
+  <hr>
+  <style>
+    .wrap2 {
+      width: 200px;
+      height: 200px;
+      display: flex;
+    }
+    .wrap2 > .box {
+      width: 50px;
+      height: 50px;
+    }
+    .wrap2#row {
+      flex-direction: row;
+    }
+    .wrap2#row-reverse {
+      flex-direction: row-reverse;
+    }
+    .wrap2#column {
+      flex-direction: column;
+    }
+    .wrap2#column-reverse {
+      flex-direction: column-reverse;
+    }
+  </style>
+  <h3>flex-direction</h3>
+  <h3>flex-direction: row</h3>
+  <div class="wrap2" id="row">
+    <div class="box">box1</div>
+    <div class="box">box2</div>
+    <div class="box">box3</div>
+  </div>
+  <h3>flex-direction: row-reverse</h3>
+  <div class="wrap2" id="row-reverse">
+    <div class="box">box1</div>
+    <div class="box">box2</div>
+    <div class="box">box3</div>
+  </div>
+  <h3>flex-direction: column</h3>
+  <div class="wrap2" id="column">
+    <div class="box">box1</div>
+    <div class="box">box2</div>
+    <div class="box">box3</div>
+  </div>
+  <h3>flex-direction: column-reverse</h3>
+  <div class="wrap2" id="column-reverse">
+    <div class="box">box1</div>
+    <div class="box">box2</div>
+    <div class="box">box3</div>
+  </div>
+
+  <hr>
+  <style>
+    .wrap3 {
+      width: 200px;
+      height: 200px;
+      display: flex;
+      flex-direction: row;
+      /*column으로 바꿀 때 다름*/
+      /*flex=direction:column + flex-wrap:wrap => flex-flow: column wrap 표기 가능*/
+    } 
+    .wrap3 > .box{
+      width: 80px;
+      height: 80px;
+    }
+    .wrap3#nowrap {
+      flex-wrap: nowrap;
+    }
+    .wrap3#wrap {
+      flex-wrap: wrap;
+    }
+    .wrap3 {
+
+    }
+  </style>
+  <h3>flex-wrap: nowrap;</h3>
+   <div class="wrap3" id="nowrap">
+    <div class="box">box1</div>
+    <div class="box">box2</div>
+    <div class="box">box3</div>
+    <div class="box">box4</div>
+    <div class="box">box5</div>
+    <div class="box">box6</div>
+  </div>
+  <h3>flex-wrap: wrap;</h3>
+   <div class="wrap3" id="wrap">
+    <div class="box">box1</div>
+    <div class="box">box2</div>
+    <div class="box">box3</div>
+    <div class="box">box4</div>
+    <div class="box">box5</div>
+    <div class="box">box6</div>
+  </div>
+
+  <hr>
+  <style>
+    .wrap4{
+      width: 200px;
+      height: 200px;
+      display: flex;
+      flex-flow: column wrap;
+    }
+    .wrap4 > .box {
+      width: 80px;
+      height: 80px;
+
+    }
+  </style>
+  <h3>flex-flow:column wrap;</h3>
+  <div class="wrap4">
+    <div class="box">box1</div>
+    <div class="box">box2</div>
+    <div class="box">box3</div>
+    <div class="box">box4</div>
+    <div class="box">box5</div>
+    <div class="box">box6</div>
+  </div>
+
+  <hr>
+  <style>
+    .wrap5 {
+      width: 300px;
+      height: 100px;
+      display: flex;
+    }
+    .wrap5 > .box {
+      width: 50px;
+      height: 50px;
+    }
+    .wrap5#flex-start {
+      justify-content: flex-start;
+    }
+    .wrap5#flex-end {
+      justify-content: flex-end;
+    }
+    .wrap5#center {
+      justify-content: center;
+    }
+    .wrap5#space-between {
+      justify-content: space-between;
+    }
+    .wrap5#space-around {
+      justify-content: space-around;
+    }
+    .wrap5#space-evenly {
+      justify-content: space-evenly;
+    }
+
+  </style>
+  <h3>justify-content: flex-start;</h3>
+    <div class="wrap5" id="flex-start">
+      <div class="box">box1</div>
+      <div class="box">box2</div>
+      <div class="box">box3</div>
+    </div>
+    <h3>justify-content: flex-end;</h3>
+    <div class="wrap5" id="flex-end">
+      <div class="box">box1</div>
+      <div class="box">box2</div>
+      <div class="box">box3</div>
+    </div>
+    <h3>justify-content: center;</h3>
+    <div class="wrap5" id="center">
+      <div class="box">box1</div>
+      <div class="box">box2</div>
+      <div class="box">box3</div>
+    </div>
+    <h3>justify-content: space-between;</h3>
+    <div class="wrap5" id="space-between">
+      <div class="box">box1</div>
+      <div class="box">box2</div>
+      <div class="box">box3</div>
+    </div>
+    <h3>justify-content: space-around;</h3>
+    <div class="wrap5" id="space-around">
+      <div class="box">box1</div>
+      <div class="box">box2</div>
+      <div class="box">box3</div>
+    </div>
+    <h3>justify-content: space-evenly;</h3>
+    <div class="wrap5" id="space-evenly">
+      <div class="box">box1</div>
+      <div class="box">box2</div>
+      <div class="box">box3</div>
+    </div>
+
+    <hr>
+    <style>
+      .wrap6{
+        width: 200px;
+        height: 300px;
+        display: flex;
+        justify-content: center;
+      }
+      .wrap6 > .box {
+        width: 50px;
+      }
+      .wrap6#flex-start {
+        align-items: flex-start;
+      }
+      .wrap6#flex-end {
+        align-items: flex-end;
+      }
+      .wrap6#center {
+        align-items: center;
+      }
+      .wrap6#strectch {
+        align-items: strectch;
+      }
+
+    </style>
+    <h3>align-items: flex-start</h3>
+    <div class="wrap6" id="flex-start">
+      <div class="box">box1</div>
+      <div class="box">box2</div>
+      <div class="box">box3</div>
+    </div>
+    <h3>align-items: flex-end</h3>
+    <div class="wrap6" id="flex-end">
+      <div class="box">box1</div>
+      <div class="box">box2</div>
+      <div class="box">box3</div>
+    </div>
+    <h3>align-items: center</h3>
+    <div class="wrap6" id="center">
+      <div class="box">box1</div>
+      <div class="box">box2</div>
+      <div class="box">box3</div>
+    </div>
+    <h3>align-items: strectch</h3>
+    <div class="wrap6" id="strectch">
+      <div class="box">box1</div>
+      <div class="box">box2</div>
+      <div class="box">box3</div>
+    </div>
+
+    <hr>
+    <style>
+      .wrap7 {
+        width: 500px;
+        height: 100px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+      }
+      .wrap7 > .box1 {
+        flex:3;
+      }
+      .wrap7 > .box2 {
+        flex: 5;
+      }
+      .wrap7 > .box3 {
+        flex: 2;
+      }
+    </style>
+    <div class="wrap7">
+      <div class="box1">box1</div>
+      <div class="box2">box2</div>
+      <div class="box3">box3</div>
+    </div>
+
+    <hr>
+    <style>
+      ul, li {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+      }
+      .gnb {
+        width: 1000px;
+        border-top: 1px solid gray;
+        border-bottom: 3px solid gray;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        margin: 50px auto;
+      }
+
+      .gnb li{
+        width: 100px;
+      }
+      .gnb a{
+      text-decoration: none;
+      display:block;
+      color: gray;
+      width: 100px;
+      height: 50px;
+      text-align: center;
+      line-height: 50px;
+      }
+      .gnb a:hover {
+      color: palevioletred;
+      }
+      .gnb a:active {
+        color: purple;
+      }
+
+    </style>
+      <ul class="gnb">
+        <li><a href="#">메뉴1</a></li>
+        <li><a href="#">메뉴2</a></li>
+        <li><a href="#">메뉴3</a></li>
+        <li><a href="#">메뉴4</a></li>
+        <li><a href="#">메뉴5</a></li>
+      </ul>
+</body>
+</html>
