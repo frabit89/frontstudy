@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+    /*
+      1. 산술 연산자
+        1) 더하기 : +
+        2) 빼기   : -
+        3) 곱하기 : *
+        4) 제곱   : **    2 ** 3 == 8
+        5) 나누기 : /     5 / 2 == 2.5
+        6) 나머지 : %     5 % 2 == 1
+        7) 몫     : parseInt() parseInt(5 / 2) == 2
+      2. 증감 연산자
+        1) 증가 : ++
+        2) 감소 : --
+      3. 대입 연산자 / 복합 대입 연산자
+        1) 대입       : =
+        2) 복합 대입  : +=, -=, *=, **=, /=, %=
+      4. 비교 연산자
+        1) 크다        : >
+        2) 크거나 같다 : >=
+        3) 작다        : <
+        4) 작거나 같다 : <=
+        5) 같다
+          (1) 값이 같다         : ==    1 == '1' 결과는 true 이다.
+          (2) 값과 타입이 같다  : ===   1 === '1' 결과는 false 이다.
+        6) 같지 않다
+          (1) 값이 같지 않다        : !=
+          (2) 값과 타입이 같지 않다 : !==
+      5. 논리 연산자
+        1) 논리 AND : &&
+        2) 논리 OR  : ||
+        3) 논리 NOT : !
+      6. 조건 연산자 (삼항 연산자)
+        (조건식) ? true 일 때 : false 일 때
+      7. 문자열 연결 연산자
+        +
+    */
+    console.log(1 == '1');    // true
+    console.log(1 === '1');   // false
+
+    console.log(1 + false);   // 1
+    console.log(2 + true);    // 3
+
+    console.log(0 == false);    // true
+    console.log(1 == true);     // true
+
+    var a = '';
+    console.log(!a);      // true
+
+    var b = 'hello';
+    console.log(!b);      // false
+
+    var x = '';
+    var y = x || '기본값';
+    console.log(y);
+
+    var x = '고길동';
+    var y = x || '기본값';
+    console.log(y);
+
+    // 일급 계산하기
+    // 시급 : 9860원
+    // 8시간까지는 시급
+    // 8시간 초과 근무는 시급 * 1.5
+    // 10시간 근무 시 일급 계산하기
+    var time = 10;
+    var money = 9860;
+    var Pay;
+    Pay = time * money;
+    var extraPay = (time <= 8) ? 0 : (time - 8) * money * 0.5;
+    console.log('일급은' + (Pay + extraPay) + '원입니다.');
+
+    
+
+
+  </script>
+</body>
+</html>
