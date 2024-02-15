@@ -32,12 +32,13 @@
     for(let i = 0; i < array.length; i++) {
       console.log(array[i]);
     }
-    console.log(i);
+    //console.log(i);
     
     // const
     const func = function() {
       console.log('func 실행');
     }
+   
 
   </script>
 
@@ -105,10 +106,19 @@
           함수이름([인자]);
     */
     
-    const myFunc = () => {
+    const myFunc1 = () => {
       console.log('myFunc 실행');
     }
-    myFunc();
+    myFunc1();
+  
+    // const myFunc2 = function() {
+    //   return 'hello world';
+    // }
+
+    
+    const myFunc2 = () => 'hello world';
+
+    console.log(myFunc2());
 
   </script>
 
