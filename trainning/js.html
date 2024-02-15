@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <script>
+
+    /*
+    JavaScript
+    1. ECMAScript(ES)
+    2. <script> 태그는 <head> 태그나 <body> 태그에 작성한다.
+    3. HTML 구성 요소의 생성/수정/삭제 작업을 수행할 수 있다.
+    4. 사용자 동작(이벤트)에 따라 특정 작업을 수행할 수 있다.
+    */
+
+    // window.alert('hello world');
+    // document.write('<h1>hello world</h1>');
+    // console.log('hello world');
+    
+    /*
+    var a;
+    console.log(a, a + 1);
+
+    var a;
+    a = 10;
+    console.log(a, typeof a);
+
+    a = 'hello';
+    console.log(a, typeof a);
+
+    b = true;
+    console.log(b, typeof b);
+    */
+
+    /*
+    console.log(x);
+    var x;
+    x = 10;
+    console.log(x);
+
+    console.log(y);
+    var y = 20;
+    console.log(y);
+    */
+
+    /*
+    var i = 10;
+    var str = String(i);
+    console.log(str, typeof str);
+
+    var j = Number(str)
+    console.log(j, typeof j);
+    */
+
+    /*
+    console.log(1 == '1');
+    console.log(1 === '1');
+
+    console.log(1 + false);
+    console.log(2 + true);
+
+    console.log(0 == false);
+    console.log(1 == true);
+
+    var a = '';
+    console.log(!a);
+
+    var b = 'hello';
+    console.log(!b);
+    */
+
+    // 일급 계산하기
+    // 시급 : 9860원
+    // 8시간까지는 시급
+    // 8시간 초과 근무는 시급 * 1.5
+    // 10시간 근무 시 일급 계산하기
+    
+    /*
+    var time = 10;
+    var money = 9860;
+    var Pay;
+    Pay = time * money;
+    var extraPay = (time <= 8) ? 0 : (time - 8) * money * 0.5;
+    console.log('일급은' + (Pay + extraPay) + '원입니다.');
+    */
+    
+    /*
+    var age = 10;
+    if(age < 0 || age > 130) {
+      result = '잘못된 나이';
+    } else if(age <= 7) {
+      result = '미취학 아동';
+    } else if(age < 13) {
+      result = '초등학생';
+    } else if(age <= 16) {
+      result = '중학생';
+    } else if(age <= 19) {
+      result = '고등학생';
+    } else {
+      result = '성인';
+    }
+    document.write('<h1>나이는' + age + '살이고,' + result + '입니다.');
+
+    var score = 75;
+    var grade;
+    switch(true) {
+      case score >= 90: grade = 'A'; break;
+      case score >= 80: grade = 'B'; break;
+      case score >= 70: grade = 'C'; break;
+      case score >= 60: grade = 'D'; break;
+      default: grade = 'F';
+    }
+    document.write('<h1>점수는' + score + '점이고, 학점은' + grade + '입니다.');
+    */
+    
+    /*
+    var n = 1;
+    var result = '<h1>';
+    while(n <= 5) {
+      result += n + '&nbsp;';
+      n++;
+    }
+    document.write(result);
+
+    var imgNo = 1;
+    var imgTag = '<div>';
+
+      while(imgNo <= 10) {
+        imgTag += '<img src = "../../assets/image/animal' + imgNo + '.jpg" width="100px">&nbsp;';
+        imgNo++; 
+      }
+      document.write(imgTag);
+
+      var selectTag = '<select name = "month">';
+      for(var month = 1; month <= 12; month++) {
+        selectTag += '<option value="'+month+'">' + month + '월</option>';
+      }
+      selectTag += '</select>';
+      document.write(selectTag);
+      
+      var imgTag = '<div>';
+      for(var row = 1; row <= 3; row++) {
+        imgTag += '<div>';
+        for(var col = 1; col <= 3; col++) {
+          imgTag += '<img src="../../assets/image/animal' + ((row - 1) * 3 + col) + '.jpg" width="100px">&nbsp;';
+        } 
+        imgTag += '</div>';
+      }
+      imgTag += '</div>';
+      document.write(imgTag);
+
+      */
+
+      /*
+      var array = [10, 'hello', true];
+
+      for(var i = 0; i < array.length; i++) {
+        console.log(array[i]);
+      }
+
+      for(var i in array) {
+        console.log(array[i]);
+      }
+
+      var logoList = ['coupang', 'daum', 'goodee', 'google', 'naver'];
+      var imgTag = '<div>';
+      for(var i = 0; i < logoList.length; i++) {
+        imgTag += '<img src="../../assets/image/logo_' + logoList[i] + '.png" width="100px">&nbsp;';
+      }
+      imgTag += '</div>';
+      document.write(imgTag);
+
+      var items = [];
+
+      items.push('A');    // A
+      items.push('B');    // A B
+      items.unshift('C'); // C A B
+      items.unshift('D'); // D C A B
+      console.log(items);
+
+      items.pop();      //  D C A
+      items.shift();    // C A
+      console.log(items);
+
+      items.splice(1, 1, 'Z');
+      console.log(items);
+
+      items.splice(items.length, 0, 'X');
+      console.log(items);
+
+      items.splice(0, 1);
+      console.log(items);
+      */
+
+      /*
+      var me = {
+        name: '고길동',
+        age: 30,
+        isAlive: true,
+        hobbies: [
+          '여행',
+          '운동'
+        ],
+        home: {
+          address: '서울',
+          tel: '02-111-1111'
+        }
+      };
+
+      var msg1= '<div>';
+      msg1 += '<div>이름:' + me.name + '</div>';
+      msg1 += '<div>나이:' + me.age + '</div>';
+      msg1 += '<div>생사여부:' + me.isAlive + '</div>';
+      msg1 += '<div>취미:';
+      for(var i = 0; i < me.hobbies.length; i++) {
+        msg1 +=  me.hobbies[i] + '&nbsp';
+      }
+      msg1 += '</div>';
+      msg1 += '<div>주소:' + me.home.address + '</div>';
+      msg1 += '<div>전화:' + me.home.tel + '</div>';
+      document.write(msg1);
+
+      var msg2 = '<ul>';
+      msg2 += '<li>이름:' + me['name'] + '</li>';
+      msg2 += '<li>나이:' + me['age'] + '</li>';
+      msg2 += '<li>생사여부:' + me['isAlive'] + '</li>';
+      msg2 += '<li>취미:';
+      for(var i = 0; i < me['hobbies'].length; i++) {
+      msg2 += me['hobbies'].length + '&nbsp;';
+      }
+      msg2 += '</li>';
+      msg2 += '<li>주소:' + me['home']['address'] + '</li>';
+      msg2 += '<li>전화:' + me['home']['tel'] + '</li>';
+      msg2 += '</li>';
+      document.write(msg2);
+
+      var you = {
+        name: '나순실',
+        age: 40,
+        isAlive: true
+      };
+
+      var msg = '<div>';
+        for(var p in you){
+          msg += '<div>' + p + ':' + you[p] + '</div>';
+        }
+        msg += '</div>';
+        document.write(msg);
+
+        var car = {};
+
+        car.maker = '벤츠';
+        car.model = '이클';
+        console.log(car);
+
+        car.maker = 'bmw';
+        car.model = '5시리즈';
+        console.log(car);
+
+        delete car.maker;
+        delete car.model;
+        console.log(car);
+        */
+
+        function myFunc1() {
+          window.alert('myFunc1 실행');
+        }
+        //myFunc1();
+
+        var myFunc2 = function() {
+          window.alert('myFunc2 실행');
+        }
+        //myFunc2();
+
+        function myFunc3(number) {
+          number = number + 1;
+        }
+        
+
+
+
+
+
+  </script>
+
+</body>
+</html>
