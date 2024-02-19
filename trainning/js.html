@@ -265,7 +265,7 @@
         delete car.model;
         console.log(car);
         */
-
+  /*
         function myFunc1() {
           window.alert('myFunc1 실행');
         }
@@ -280,11 +280,277 @@
           number = number + 1;
         }
         
+        var number = 10;
+        console.log(number);
+        myFunc3(number);
+        console.log(number);
 
+        function myFunc4(array) {
+          array[0] = 'Z';
+        }
 
+        var array  = ['A', 'B'];
+        console.log(array);
+        myFunc4(array);
+        console.log(array);
 
+        function myFunc5(obj) {
+          obj.maker = '벤츠';
+          obj.model = '이클';
+        }
 
+        var obj = {
+          maker: 'bmw',
+          model: '5시리즈'
+        };
+        console.log(obj);
+        myFunc5(obj);
+        console.log(obj);
 
+        function myFunc6(number) {
+          number = number || 0;
+          console.log(number);
+        }
+
+        myFunc6();
+        myFunc6(100);
+
+        function myFunc7(...numbers) {
+          var total = 0;
+          for(var i = 0; i < numbers.length; i++) {
+            total += numbers[i];
+          }
+          console.log(total);
+        }
+
+        myFunc7(1, 2, 3);
+        myFunc7(1, 2, 3, 4);
+
+        function myFunc8() {
+          var total = 0;
+          for(var i = 0; i < arguments.length; i++) {
+            total += arguments[i];
+          }
+          console.log(total / arguments.length);
+        }
+
+        myFunc8(1, 2, 3, 4);
+
+        function myFunc9(func) {
+          func();
+        }
+
+        myFunc9(function() {
+          console.log('익명함수');
+        });
+
+        function myFunc10(func, x, y) {
+          func(x, y);
+        }
+
+        myFunc10(function(x, y) {
+          console.log(x, y);
+        }, 'hello', 'world');
+
+        function myMax() {
+          var max = arguments[0] || 0;
+          for(var i = 1; i < arguments.length; i++) {
+            if(max < arguments[i]) {
+              max = arguments[i];
+            }
+          }
+          return max;
+        }
+
+        console.log(myMax());
+        console.log(myMax(4, 2, 5, 6));
+        console.log(myMax(4, 2 , 5 , 6, 7, 1, 9));
+
+        function getAddSquare(x, y) {
+          function getSquare(a) {
+            return a * a;
+          }
+          return getSquare(x) + getSquare(y);
+        }
+
+        var result = getAddSquare(3, 4);
+        console.log(result);
+
+        function outer(a) {
+          function inner(b) {
+            return a + b;
+          }
+          return inner;
+        }
+        console.log(outer(10));
+        console.log(outer(10)(20));
+  */
+
+  /*
+  eval('console.log(1+2)');
+  var number = 'abc';
+  if(isNaN(number)) {
+    console.log(number + '는 숫자가 아님');
+  } else {
+    if(number % 2 == 1) {
+      console.log(number + '는 홀수');
+    } else {
+      console.log(number + '는 짝수');
+    }
+  }
+
+  console.log(encodeURIComponent('https://search.naver.com/search.naver?query=내일날씨'));
+  console.log(decodeURIComponent('%3A%3F%2F'));
+
+  var msg = '';
+  function countDown(number) {
+    setTimeout(function() {
+      if(number == 0) {
+        msg = '<h1>발사</h1>';
+        document.write(msg);
+        return;
+      }
+      msg = '<h1>' + number + '</h1>';
+      document.write(msg);
+      countDown(number - 1);
+    }, 1000);
+  }
+  //countDown(5);
+
+  var msg = '';
+  function timer(number) {
+    var timerId = setInterval(function() {
+    if(number == 0) {
+      msg = '<h1>발사</h1>';
+      document.write(msg);
+      clearInterval(timerId);
+      return;
+    }
+    msg = '<h1>' + number-- + '</h1>';
+    document.write(msg);
+   }, 1000);
+  }
+  
+  timer(3);
+  */
+  /*
+  var car = {
+    maker: 'bmw',
+    model: '5시리즈'
+  };
+
+  var jsonData = JSON.stringify(car);
+  console.log(jsonData, typeof jsonData);
+
+  var jsObj = JSON.parse(jsonData)
+  console.log(jsObj, typeof jsObj);
+
+  var array = ['game', 'travel', 'cooking', 'movie', 'fishing'];
+
+  array.forEach(function(element) {
+    console.log(element);
+  });
+  array.forEach(function(element, i) {
+    console.log(i, element);
+  });
+  array.filter(function(element){
+    return element.length > 5;
+  }).forEach(function(element){
+    console.log(element);
+  });
+
+  array.filter((element) => element.length > 5)
+       .forEach((element) => {console.log(element);
+      });
+
+  array.map(function(element){
+    return element + '가자';
+  }).forEach(function(element){
+    console.log(element);
+  });
+  */
+  /*
+  console.log('절대값', Math.abs(-5));
+  console.log('정수 올림값', Math.ceil(5.1));
+  console.log('정수 올림값', Math.ceil(-5.1));
+  console.log('정수 내림값', Math.floor(5.1));
+  console.log('정수 내림값', Math.floor(-5.1));
+  console.log('정수 반올림값', Math.round(5.5));
+  console.log('정수 반올림값', Math.round(-5.5));
+  console.log('정수 절사값', Math.trunc(5.5));
+  console.log('정수 절사값', Math.trunc(-5.5));
+  console.log('제곱', Math.pow(2, 3));
+  console.log('제곱근', Math.sqrt(25));
+  console.log('난수', Math.random());
+  console.log('주사위', parseInt(Math.random() * 6 + 1));
+  */
+
+  /*
+  var now = Date();
+  console.log(now, typeof now);
+
+  var someday = new Date(2024, 0, 12, 0, 0);
+  console.log(someday, typeof someday);
+
+  var timestamp = Date.now();
+  console.log(timestamp, typeof timestamp);
+
+  var now = new Date();
+  var year = now.getFullYear();
+  var month = now.getMonth();
+  var day = now.getDate();
+  var hour = now.getHours();
+  var minute = now.getMinutes();
+  var second = now.getSeconds();
+  var timestamp = now.getTime();
+  console.log(year, month + 1, day, hour, minute, second, timestamp);
+  */
+  
+  var str = 'JavaScript';
+  console.log(str.length);
+  console.log('첫 번째 글자', str.charAt(0));
+  console.log('마지막 글자', str.charAt(str.length - 1));
+
+  console.log('첫 번째 인덱스', str.indexOf('a'));
+  console.log('마지막 인덱스', str.lastIndexOf('a'));
+
+  console.log('Java', str.substring(0, 4));
+  console.log('Script', str.substring(4));
+  console.log('Java', str.substr(0, 4));
+  console.log('Script', str.substr(4));
+  console.log('Java', str.slice(0, 4));
+  console.log('Script', str.slice(4));
+  console.log('Java', str.slice(-10, -6));
+  console.log('Script', str.slice(-6));
+  
+  console.log(str.startsWith('Java'));
+  console.log(str.endsWith('Script'));
+  console.log(str.match(/[A-Z]/));
+  
+  console.log(str.replace('a', '_'));
+  console.log(str.replaceAll(/[A-Z]/g, '_'));
+
+  console.log(str.concat('a', 'bc', 'def'));
+
+  console.log(str.repeat(3));
+
+  console.log('대문자', str.toUpperCase());
+  console.log('소문자', str.toLowerCase());
+
+  var str = '   Java    Script      ';
+  console.log('앞뒤제거',str.trim());
+  console.log('앞제거', str.trimStart());
+  console.log('뒤제거', str.trimEnd());
+
+  var str = 'JavaScript';
+  console.log('앞에채우기', str.padStart(15, '*'));
+  console.log('뒤에채우기', str.padEnd(15, '*'));
+
+  var str = new String('JavaScript');
+  console.log(str, typeof str);
+  console.log(str.valueOf(), typeof str.valueOf());
+  
+  
   </script>
 
 </body>

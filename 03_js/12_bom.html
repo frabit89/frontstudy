@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <script>
+    document.write('<h1>화면 너비 : ' + screen.width + '</h1>');
+    document.write('<h1>가용 너비 : ' + screen.availWidth + '</h1>');
+    document.write('<h1>화면 높이 : ' + screen.height + '</h1>');
+    document.write('<h1>가용 높이 : ' + screen.availHeight + '</h1>');
+  </script>
+
+  <div>
+    <div><button id="btn1">뒤로</button></div>
+    <div><button id="btn2">앞으로</button></div>
+    <div><button id="btn3">뒤로</button></div>
+    <div><button id="btn4">앞으로</button></div>
+  </div>
+  <script>
+    document.getElementById('btn1').onclick = function() {
+      history.back();
+    }
+    document.getElementById('btn2').onclick = function() {
+      history.forward();
+    }
+    document.getElementById('btn3').addEventListener('click', function() {
+      history.go(-1);
+    })
+    document.getElementById('btn4').addEventListener('clcik', function(){
+      history.go(1);
+    })
+  </script>
+
+  <!-- <div><button id="btn">구글</button></div> -->
+  <div>
+    <button onclick="goGoogle()">클릭</button>
+  </div>
+  
+  <script>
+  //  document.getElementById('btn').onclick = function() {
+  //  location.href = 'https://www.google.com/';
+  //  }
+    function goGoogle() {
+      location.href = 'https://www.google.com/';
+    }
+  </script>
+
+  <div>
+    <button id="btn-open">열기</button>
+  </div>
+
+  <script>
+    document.getElementById('btn-open').addEventListener('click', function() {
+      var myWindow = window.open();
+      if(!myWindow) {
+        window.alert('팝업 차단을 해제해 주세요.');
+      }
+      console.log(myWindow);
+    })
+  </script>
+
+  <div>
+    <a id="link" href="http://gdu.co.kr/">링크</a>
+  </div>
+
+  <script>
+    var myWindow = null;
+    document.getElementById('link').addEventListener('click', function(evt) {
+        if(myWindow === null || myWindow.closed) {
+          myWindow = window.open(evt.target.href);
+        } else {
+          myWindow.focus();
+        }
+        evt.preventDefault();
+    })
+  </script>
+
+  <div>
+    <a id="link2" href="https://www.gdu.co.kr/" target="">링크2</a>
+  </div>
+
+  <script>
+    var myWindow = null;
+    document.getElementById('link2').addEventListener('click', function(evt) {
+      if(myWindow === null || myWindow.closed) {
+        myWindow = window.open(evt.target.href, 'myWindowName');
+      } else {
+        myWindow.focus();
+      }
+      evt.preventDefault();
+    })
+  </script>
+
+  <div>
+    <a style="cursor: pointer;" id="link3">링크3</a>
+  </div>
+
+  <script>
+    var myWindow = null;
+    document.getElementById('link3').addEventListener('click', function() {
+      if(myWindow === null || myWindow.closed) {
+        var features = 'width=' + (screen.width / 2);
+        features += ',height=' +  (screen.height / 2);
+        features += ',top=' + (screen.Height / 4);
+        features += ',left=' + (screen.width / 4);
+
+        myWindow = window.open('https://www.gdu.co.kr/', '', features);
+      } else {
+        myWindow.focus();
+      }
+
+    })
+  </script>
+
+  <div>
+      <input type="text" id="a">
+      <button id="btn" type="button">전송</button>
+      <div>자식 창에서 전송한 값은 <span id="c"></span>입니다.</div>
+
+  </div>
+  <script>
+
+    // 전역 객체 (모든 함수와 영역에서 접근할 수 있다.)
+    var popupWindow = null;
+    // 창 열기 함수 선언
+    function openWindow() {
+      if(popupWindow === null || popupWindow.closed) {
+        popupWindow = window.open('12_popup.html');
+      } else {
+        popupWindow.focus();
+      }
+    }
+    // 데이터 보내기 함수 선언
+    function sendData() {
+      //12_popup.html 문서(객체 popupWindow) 본문을 모두 읽은 뒤에 처리하는 이벤트 : load 이벤트
+      popupWindow.onload = function() {
+        popupWindow.document.getElementById('b').textContent = window.document.getElementById('a').value;
+      }
+      
+    }
+    document.getElementById('btn').onclick = function() {
+      openWindow();
+      sendData();
+    }
+
+  </script>
+
+</body>
+</html>
