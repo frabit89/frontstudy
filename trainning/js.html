@@ -505,7 +505,7 @@
   var timestamp = now.getTime();
   console.log(year, month + 1, day, hour, minute, second, timestamp);
   */
-  
+  /*
   var str = 'JavaScript';
   console.log(str.length);
   console.log('첫 번째 글자', str.charAt(0));
@@ -550,8 +550,335 @@
   console.log(str, typeof str);
   console.log(str.valueOf(), typeof str.valueOf());
   
+  var str = 'a,b,c,d,e';
+  var array = str.split(',');
+  console.log(array);
+  var str = array.join(',');
+  console.log(str);
   
+  console.log(str.split(',').join(''));
+  */
   </script>
+  
+  <!-- <div class="wrap">
+    <div id="box1" class="primary-box">box1</div>
+    <div id="box2" class="primary-box">box2</div>
+    <div id="box3" class="primary-box">box3</div>
+  </div> -->
+  
+  <script>
+    /*
+    console.log(document.getElementById('box1'));
+    console.log(document.getElementsByClassName('primary-box'));
+    console.log(document.getElementsByTagName('div'));
+    console.log(document.querySelector('.wrap#box1'));
+    console.log(document.querySelectorAll('.wrap1 > .primary-box'));
+    */
+  </script>
+
+    <!-- <div id="div1"><strong>안녕하세요</strong></div> -->
+  <script>
+    /*
+    console.log(document.getElementById('div1').textContent);
+    document.getElementById('div1').textContent = '<em>안녕하다.</em>';
+    document.getElementById('div1').textContent += '<mark>반갑다.</mark>';
+    
+    console.log(document.getElementById('div1').innerHTML);
+    document.getElementById('div1').innerHTML = '<em>안녕하다.</em>';
+    document.getElementById('div1').innerHTML += '<mark>반갑다.</mark>';
+    */
+  </script>
+
+  <!-- <div id="div3">
+    <img src="../../assets/image/animal10.jpg" width="100px" height="100px">
+  </div> -->
+  <script>
+    /*
+    console.log(document.querySelector('#div3 > img').getAttribute('src'));
+    document.querySelector('#div3 > img').setAttribute('src', '../../assets/image/flower1.jpg');
+    document.querySelector('#div3 > img').removeAttribute('width');
+    console.log(document.querySelector('#div3 > img').getAttribute('Alt'));
+    */
+  </script>
+<!-- 
+  <div id="div4">
+    <input type="radio" name="gender" value="man" class="blind" id="man" checked="checked">
+    <label for="man">남자</label>
+    <input type="radio" name="gender" value="woman" id="woman" class="blind">
+    <label for="woman">여자</label>
+  </div> -->
+
+  <style>
+    /* #div4 > .blind {
+      display: none;
+    }
+    #div4 > label {
+      display: inline-block;
+      width: 100px;
+      height: 50px;
+      text-align: center;
+      line-height: 50px;
+      background-color: beige;
+      cursor: pointer;
+    }
+    #div4 > input:checked + label {
+      background-color: bisque;
+    } */
+  </style>
+
+  <script>
+    /*
+    document.getElementById('man').checked = false;
+    document.getElementById('woman').checked = true;
+
+    document.getElementById('man').removeAttribute('checked');
+    document.getElementById('woman').setAttribute('checked', 'checked');
+
+    var blind = document.getElementsByClassName('blind');
+      while(blind.length > 0) {
+        blind[0].classList.remove('blind');
+      }
+      */
+  </script>
+
+  <!-- <div id="div5">마무리합니다</div> -->
+  <script>
+    // document.getElementById('div5').style.fontSize = '32px';
+    // document.getElementById('div5').style['background-color'] = 'yellow';
+  </script>
+  
+
+  <div id="div1">
+    <button type="button">버튼</button>
+  </div>
+
+  <script>
+    /*
+    document.querySelector('#div1 > button').onclick = function(evt) {
+      alert('hello world');
+    }
+    function aaa() {
+      alert('aaa');
+    }
+    function bbb() {
+      alert('bbb');
+    }
+    document.querySelector('#div1 > button').onclick = function() {
+      aaa();
+      bbb();
+    }
+    
+    document.querySelector('#div1 > button').onclick = function(evt) {
+      console.log(evt);
+      console.log('이벤트 대상', evt.target);
+      console.log('이벤트 대상', this);
+      console.log('이벤트 타입', evt.type);
+    }
+    document.querySelector('#div1 > button').onclick = function(evt) {
+      evt.target.style.display = 'none';
+    }
+    */
+
+  </script>
+
+  <div id="div2">
+    <button type="button">클릭</button>
+  </div>
+  <script>
+    /*
+    document.querySelector('#div2 > button').addEventListener('click', function(evt) {
+      console.log(evt.target.parentElement);
+      evt.target.parentNode.ineerHTML += '<input type="text">';
+      evt.target.style.display = 'none';
+    })
+    */
+  </script>
+
+  <div id="div3">
+    <button type="button" onclick="myFunc(this)">클릭</button>
+  </div>
+  <script>
+   // onclick 이벤트가 발생하면 해당 요소에서 JavaScript 함수를 호출하는데, 
+   // this는 이벤트를 발생시킨 요소를 참조합니다. 
+   // myFunc(this)는 이벤트를 발생시킨 요소를 myFunc() 함수에 전달합니다.
+    /*
+    function myFunc(btn) {
+      console.log(btn);
+      btn.style.display = 'none';
+    }
+    */
+  </script>
+
+  <div id="div4">
+    <div><a href="https://google.com/">구글</a></div>
+    <div><a href="https://naver.com/">네이버</a></div>
+    <div><a href="javascript:myFunc2()">클릭</a></div>
+  </div>
+  <div id="div5">
+    <form action="/server/somewhere.do"
+          method="get">
+      <input type="text" name="query" id="query">
+      <input type="text" name="q" id="q">
+      <button type="submit">전송</button>
+    </form>
+  </div>
+  <script>
+    /*
+     function myFunc2(){
+      alert('hello world');
+    }
+    document.querySelector('#div5 form').onsubmit = function(evt) {
+      if(document.getElementById('query').value === '') {
+        alert('입력1 하시오');
+        document.getElementById('query').focus();
+        evt.preventDefault();
+        return;
+      }
+      if(document.getElementById('q').value === '') {
+        alert('입력2 하시오');
+        document.getElementById('q').focus();
+        evt.preventDefault();
+        return;
+      }
+    }
+    
+     document.querySelectorAll('#div4 a').forEach(function(aTag){
+       aTag.onClick = function(evt) {
+         if(evt.target.getAttribute('href').startsWith('Javascript')){
+           evt.preventDefault();
+         }
+       }
+     })
+     */
+
+  </script>
+  <script>
+    document.write('<h1>화면 너비 :' + screen.width + '</h1>');
+    document.write('<h1>가용 너비 :' + screen.availWidth + '</h1>');
+    document.write('<h1>화면 높이 :' + screen.height + '</h1>' )
+    document.write('<h1>가용 높이 :' + screen.availHeight + '</h1>' )
+  </script>
+
+  <div>
+    <div><button id="btn1">뒤로</button></div>
+    <div><button id="btn2">앞으로</button></div>
+    <div><button id="btn3">뒤로</button></div>
+    <div><button id="btn4">앞으로</button></div>
+  </div>
+
+  <div>
+    <button onclick="goGoogle()">클릭</button>
+  </div>
+
+  <div>
+    <button id="btn-open">열기</button>
+  </div>
+
+  <div>
+    <a id="link" href="http://gdu.co.kr">링크</a>
+  </div>
+
+  <div>
+    <a id="link2" href="https://www.gdu.co.kr/" target="">링크</a>
+  </div>
+
+  <div>
+    <a style="cursor: pointer;" id="link3">링크3</a>
+  </div>
+
+  <div>
+    <input type="text" id="a">
+    <button id="btn" type="button">전송</button>
+    <div>자식 창에서 전송한 값은 <span id="c"></span>입니다.</div>
+  </div>
+
+  <script>
+    /*
+    document.getElementById('btn1').onclick = function() {
+      history.back();
+    }
+    document.getElementById('btn2').onclick = function() {
+      history.forward();
+    }
+    document.getElementById('btn3').addEventListener('click', function() {
+      history.go(-1);
+    })
+    document.getElementById('btn4').addEventListener('click', function() {
+      history.go(1);
+    })
+
+    function goGoogle() {
+    location.href = 'https://www.google.com/';
+    }
+    
+    document.getElementById('btn-open').addEventListener('click', function() {
+      var myWindow = window.open();
+      if(!myWindow) {
+        window.alert('팝업 해제 필요');
+      }
+      console.log(myWindow);
+    })
+
+    var myWindow = null;
+    document.getElementById('link').addEventListener('click', function(evt) {
+      if(myWindow === null || myWindow.closed) {
+        myWindow = window.open(evt.target.href);
+      } else {
+        myWindow.focus();
+      }
+      evt.preventDefault();
+    })
+    */
+
+    var myWindow = null;
+    document.getElementById('link2').addEventListener('click', function(evt){
+      if(myWindow === null || myWindow.closed) {
+        myWindow = window.open(evt.target.href, 'myWindowName');
+      } else {
+        myWindow.focus();
+      }
+      evt.preventDefault();
+    }) 
+
+    var myWindow = null;
+    document.getElementById('link3').addEventListener('click', function() {
+      if(myWindow === null || myWindow.closed) {
+        var features = 'width=' + (screen.width /2);
+            features += ',height=' + (screen.height /2);
+            features += ',top=' + (screen.height / 4);
+            features += ',left=' + (screen.width / 4);
+
+            myWindow = window.open('https://www.gdu.co.kr/', '', features);
+      } else {
+        myWindow.focus();
+      }
+    })
+
+    var popupWindow = null;
+
+    function openWindow() {
+      if(popupWindow === null || popupWindow.closed) {
+        popupWindow = window.open('popup.html');
+      } else {
+        popupWindow.focus();
+      }
+    }
+
+    function sendData() {
+      popupWindow.onload = function() {
+        popupWindow.document.getElementById('b').textContent = window.document.getElementById('a').value;
+      }
+    }
+    document.getElementById('btn').onclick = function() {
+      openWindow();
+      sendData();
+    }
+
+
+
+
+  </script>
+
 
 </body>
 </html>
