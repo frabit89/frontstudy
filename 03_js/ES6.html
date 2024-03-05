@@ -343,6 +343,7 @@
         .then((binaryImage)=>{
           let img = document.querySelector('#div1 > imag');
           img.src = URL.createObjectURL(binaryImage);
+          // Blob 또는 File 객체를 가리키는 URL을 생성
           img.width = 192;    
         })
         .catch((msg)=>{
@@ -466,7 +467,7 @@
 
   getAlbum()
     .then(resData=>console.log(resData))
-    .cache(msg=>console.log(msg));
+    .catch(msg=>console.log(msg));
 </script>
 
 
